@@ -11,7 +11,7 @@ export const ProductsProvider = ({ children }) => {
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ allMovies }}>
+    <ProductsContext.Provider value={{ allMovies, setAllMoives }}>
       {children}
     </ProductsContext.Provider>
   );

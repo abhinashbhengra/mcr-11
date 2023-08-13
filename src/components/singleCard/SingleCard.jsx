@@ -14,32 +14,32 @@ export const SingleCard = () => {
       <div className="flex justify-between shadow-lg">
         <div className="h-1/4">
           <img
-            src={selectedMovie.imageURL}
-            alt={selectedMovie.title}
+            src={selectedMovie?.imageURL}
+            alt={selectedMovie?.title}
             width={300}
           />
         </div>
         <div>
-          <p>{selectedMovie.title}</p>
-          <p>{selectedMovie.summary}</p>
-          <p>Year : {selectedMovie.year}</p>
+          <p>{selectedMovie?.title}</p>
+          <p>{selectedMovie?.summary}</p>
+          <p>Year : {selectedMovie?.year}</p>
           <p>
             Genre :{" "}
-            {selectedMovie.genre.map((g, i) =>
-              i < selectedMovie.genre.length - 1 ? (
+            {selectedMovie?.genre.map((g, i) =>
+              i < selectedMovie?.genre.length - 1 ? (
                 <span key={i}>{` ${g}, `}</span>
               ) : (
                 <span key={i}>{g}</span>
               )
             )}
           </p>
-          <p>Rating : {selectedMovie.rating}</p>
-          <p>Director : {selectedMovie.director}</p>
-          <p>Writer : {selectedMovie.writer}</p>
+          <p>Rating : {selectedMovie?.rating}</p>
+          <p>Director : {selectedMovie?.director}</p>
+          <p>Writer : {selectedMovie?.writer}</p>
           <p>
             Cast :{" "}
-            {selectedMovie.cast.map((c, i) =>
-              i < selectedMovie.cast.length - 1 ? (
+            {selectedMovie?.cast.map((c, i) =>
+              i < selectedMovie?.cast.length - 1 ? (
                 <span key={i}>{` ${c}, `}</span>
               ) : (
                 <span key={i}>{c}</span>
