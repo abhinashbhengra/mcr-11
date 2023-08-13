@@ -10,9 +10,14 @@ export const StarredMoviesProvider = ({ children }) => {
     const selectedMovie = allMovies.find((movie) => movie.id === movieId);
     setStarredMovies((curr) => [...curr, selectedMovie]);
   };
+
+  const removeFromStarredMovies = (movieId) => {
+    const updatedMovies = starredMovies.filter((movie) => movie.id !== movieId);
+    setStarredMovies(updatedMovies);
+  };
   return (
     <StarredMoviesContext.Provider
-      value={{ starredMovies, addToStarredMovies }}
+      value={{ starredMovies, addToStarredMovies, removeFromStarredMovies }}
     >
       {children}
     </StarredMoviesContext.Provider>
